@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Tailwind CSS directives */
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind base;
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind components;
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind utilities;
+
+/* Custom cursor glow effect */
+.custom-cursor {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(148, 163, 184, 0.12) 0%,
+    rgba(148, 163, 184, 0.06) 40%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.2s ease-out;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-trail {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(148, 163, 184, 0.06) 0%,
+    rgba(148, 163, 184, 0.03) 50%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.4s ease-out;
+  mix-blend-mode: difference;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d2c2a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b8680;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d1cfcc;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
+  background-image: url("/images/background1.jpg");
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Base styles */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: transparent;
+  color: #e8e6e3;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Custom utility classes */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Animation delays for staggered effects */
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
