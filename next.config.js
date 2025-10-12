@@ -5,8 +5,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: process.env.NODE_ENV === "production" ? "/MWS_V5" : "",
-  basePath: process.env.NODE_ENV === "production" ? "/MWS_V5" : "",
 };
 
 module.exports = nextConfig;
