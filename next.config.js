@@ -7,6 +7,8 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
+    loader: 'custom',
+    loaderFile: './imageLoader.js'
   },
   basePath: basePath,
   assetPrefix: basePath,
