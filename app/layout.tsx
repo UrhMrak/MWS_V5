@@ -17,14 +17,17 @@ export default function RootLayout({
   const backgroundImageUrl = `${basePath}/images/background1.jpg`;
 
   return (
-    <html
-      lang="en"
-      className="min-h-screen"
-      style={{
-        backgroundImage: `url(${backgroundImageUrl})`,
-      }}
-    >
-      <body className="font-inter antialiased min-h-screen">{children}</body>
+    <html lang="en" className="min-h-screen">
+      <body className="font-inter antialiased min-h-screen">
+        {/* Fixed background div that works on mobile */}
+        <div
+          className="fixed-background"
+          style={{
+            backgroundImage: `url(${backgroundImageUrl})`,
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
