@@ -12,8 +12,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const isProd = process.env.NODE_ENV === "production";
+  const basePath = isProd ? "/MWS_V5" : "";
+  const backgroundImageUrl = `${basePath}/images/background1.jpg`;
+
   return (
-    <html lang="en" className="min-h-screen">
+    <html
+      lang="en"
+      className="min-h-screen"
+      style={{
+        backgroundImage: `url(${backgroundImageUrl})`,
+      }}
+    >
       <body className="font-inter antialiased min-h-screen">{children}</body>
     </html>
   );
