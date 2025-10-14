@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import Image from "../components/CustomImage";
 import Navigation from "../components/Navigation";
 
 export default function Home() {
