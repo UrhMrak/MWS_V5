@@ -93,6 +93,14 @@ body {
   pointer-events: none;
 }
 
+/* Safari mobile specific fix for viewport height */
+@supports (-webkit-touch-callout: none) {
+  .fixed-background {
+    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
+  }
+}
+
 /* Custom utility classes */
 .text-balance {
   text-wrap: balance;
