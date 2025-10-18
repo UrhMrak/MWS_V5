@@ -6,11 +6,22 @@ import Image from "./CustomImage";
 interface NavigationProps {
   activeSection: string;
   onNavClick: (section: string) => void;
+  language: "en" | "de";
+  onLanguageChange: (lang: "en" | "de") => void;
+  translations: {
+    home: string;
+    about: string;
+    work: string;
+    contact: string;
+  };
 }
 
 const Navigation: React.FC<NavigationProps> = ({
   activeSection,
   onNavClick,
+  language,
+  onLanguageChange,
+  translations,
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -25,10 +36,10 @@ const Navigation: React.FC<NavigationProps> = ({
   }, []);
 
   const navItems = [
-    { id: "home", label: "HOME" },
-    { id: "about", label: "ABOUT ME" },
-    { id: "work", label: "MY WORK" },
-    { id: "contact", label: "CONTACT" },
+    { id: "home", label: translations.home },
+    { id: "about", label: translations.about },
+    { id: "work", label: translations.work },
+    { id: "contact", label: translations.contact },
   ];
 
   const socialLinks = [
@@ -59,11 +70,27 @@ const Navigation: React.FC<NavigationProps> = ({
         {/* Language Selector */}
         <div className="absolute top-8 flex flex-col space-y-2">
           <div className="flex items-center space-x-1 text-xs font-medium text-charcoal">
-            <span className="text-accent">EN</span>
+            <button
+              onClick={() => onLanguageChange("en")}
+              className={`transition-colors duration-300 cursor-pointer ${
+                language === "en"
+                  ? "text-accent"
+                  : "text-charcoal hover:text-accent"
+              }`}
+            >
+              EN
+            </button>
             <span className="text-medium-gray">I</span>
-            <span className="text-charcoal hover:text-accent cursor-pointer transition-colors duration-300">
+            <button
+              onClick={() => onLanguageChange("de")}
+              className={`transition-colors duration-300 cursor-pointer ${
+                language === "de"
+                  ? "text-accent"
+                  : "text-charcoal hover:text-accent"
+              }`}
+            >
               DE
-            </span>
+            </button>
           </div>
         </div>
 
@@ -129,8 +156,8 @@ const Navigation: React.FC<NavigationProps> = ({
       >
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo/Brand */}
-            <div className="flex items-center">
+            {/* Logo/Brand and Language Selector */}
+            <div className="flex items-center space-x-3">
               <Image
                 src="/images/logo_black.png"
                 alt="MRAK Logo"
@@ -139,6 +166,30 @@ const Navigation: React.FC<NavigationProps> = ({
                 className="object-contain brightness-0 invert"
                 priority
               />
+              {/* Mobile Language Selector */}
+              <div className="flex items-center space-x-1 text-[10px] font-medium">
+                <button
+                  onClick={() => onLanguageChange("en")}
+                  className={`transition-colors duration-300 ${
+                    language === "en"
+                      ? "text-accent"
+                      : "text-charcoal hover:text-accent"
+                  }`}
+                >
+                  EN
+                </button>
+                <span className="text-medium-gray">I</span>
+                <button
+                  onClick={() => onLanguageChange("de")}
+                  className={`transition-colors duration-300 ${
+                    language === "de"
+                      ? "text-accent"
+                      : "text-charcoal hover:text-accent"
+                  }`}
+                >
+                  DE
+                </button>
+              </div>
             </div>
 
             {/* Navigation Items */}

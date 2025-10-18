@@ -4,6 +4,114 @@ import { useState, useEffect, useRef } from "react";
 import Image from "../components/CustomImage";
 import Navigation from "../components/Navigation";
 
+// Translation object
+const translations = {
+  en: {
+    nav: {
+      home: "HOME",
+      about: "ABOUT ME",
+      work: "PROJECTS",
+      contact: "CONTACT",
+    },
+    home: {
+      greeting: "Hi, I am Urh Mrak!",
+      description:
+        "I craft pixel-perfect websites that bring creatives' visions to life — beautiful, bold, and bursting with personality. Every site I design is a seamless blend of speedy performance and elegant user experience, making your online presence as stunning as your ideas. Dive in to see my work or drop me a line, and let's make something amazing together.",
+      cta: "View My Work",
+    },
+    about: {
+      title: "About Me",
+      paragraph1:
+        "I'm Urh, and I'm here to help you create an online presence that's both beautiful and bold — one that captures your unique personality and forges a genuine connection with your audiences and communities.",
+      paragraph2:
+        "You can find me in Iceland or somewhere across Europe, always on the lookout for the next inspiring project — whether it's in music or technology. When I find myself in my current home base, Iceland, surrounded by breathtaking natural beauty, I also treasure the lively, fun moments shared on stage with my colleagues in the Iceland Symphony Orchestra.",
+      paragraph3:
+        "Classical music and the serenity of nature fuel my creativity, while technology and AI keep me excited about the future. It's a unique harmony I love exploring, both on stage and on screen.",
+      techTitle: "Technologies I Work With",
+    },
+    work: {
+      title: "My Work",
+      subtitle: "Have a look at my recent creations:",
+      project1Title: "Suzuki Early Music Education Classes for the youngest",
+      project1Description:
+        "The Suzuki Early Childhood Education Reykjavik website showcases a joyful and nurturing music program for babies and parents, inspired by the Suzuki Method. It highlights the unique teaching approach, class details, and the passionate instructor, creating a warm invitation for families to discover the benefits of early musical development. The site reflects the program's focus on creativity, growth, and community in a visually inviting way.",
+      project2Title: "Urh Mrak - Cellist",
+      project2Description:
+        "An artistic portrayal of my journey as a cellist. This clean and elegant website highlights select media, shares my biography, and offers an inviting space for people to get in touch with me.",
+    },
+    contact: {
+      title: "Get in Touch",
+      subtitle:
+        "Have a project in mind? Let's discuss how we can work together to bring your ideas to life.",
+      emailLabel: "Email Address",
+      emailPlaceholder: "your.email@example.com",
+      messageLabel: "Message",
+      messagePlaceholder: "Tell me about your project...",
+      submitButton: "Send Message",
+    },
+    footer: {
+      copyright: "© 2025 Urh Mrak. All rights reserved.",
+      privacyPolicy: "Privacy Policy",
+    },
+    privacy: {
+      title: "Privacy Policy",
+      close: "Close",
+    },
+  },
+  de: {
+    nav: {
+      home: "HOME",
+      about: "ÜBER MICH",
+      work: "PROJEKTE",
+      contact: "KONTAKT",
+    },
+    home: {
+      greeting: "Hallo, ich bin Urh Mrak!",
+      description:
+        "Ich erstelle pixelgenaue Websites, die die Visionen von Kreativen zum Leben erwecken — schön, mutig und voller Persönlichkeit. Jede Website, die ich gestalte, ist eine nahtlose Verbindung von schneller Performance und elegantem Benutzererlebnis, die Ihre Online-Präsenz genauso beeindruckend macht wie Ihre Ideen. Tauchen Sie ein, um meine Arbeit zu sehen, oder schreiben Sie mir eine Nachricht — lassen Sie uns gemeinsam etwas Großartiges erschaffen.",
+      cta: "Meine Arbeiten ansehen",
+    },
+    about: {
+      title: "Über mich",
+      paragraph1:
+        "Ich bin Urh und helfe Ihnen dabei, eine Online-Präsenz zu schaffen, die sowohl schön als auch mutig ist — eine, die Ihre einzigartige Persönlichkeit einfängt und eine echte Verbindung zu Ihrem Publikum und Ihren Communities schafft.",
+      paragraph2:
+        "Sie finden mich in Island oder irgendwo in Europa, immer auf der Suche nach dem nächsten inspirierenden Projekt — sei es in der Musik oder in der Technologie. Wenn ich mich in meiner derzeitigen Heimatbasis Island befinde, umgeben von atemberaubender Naturschönheit, schätze ich auch die lebhaften, unterhaltsamen Momente auf der Bühne mit meinen Kollegen im Isländischen Sinfonieorchester.",
+      paragraph3:
+        "Klassische Musik und die Ruhe der Natur beflügeln meine Kreativität, während Technologie und KI mich für die Zukunft begeistern. Es ist eine einzigartige Harmonie, die ich gerne erforsche, sowohl auf der Bühne als auch am Bildschirm.",
+      techTitle: "Technologien, mit denen ich arbeite",
+    },
+    work: {
+      title: "Meine Arbeiten",
+      subtitle: "Werfen Sie einen Blick auf meine neuesten Kreationen:",
+      project1Title: "Suzuki Frühe Musikerziehung für die Kleinsten",
+      project1Description:
+        "Die Website der Suzuki Early Childhood Education Reykjavik präsentiert ein freudiges und förderndes Musikprogramm für Babys und Eltern, inspiriert von der Suzuki-Methode. Sie hebt den einzigartigen Unterrichtsansatz, Kursdetails und die leidenschaftliche Lehrerin hervor und schafft eine herzliche Einladung für Familien, die Vorteile der frühen musikalischen Entwicklung zu entdecken. Die Website spiegelt den Fokus des Programms auf Kreativität, Wachstum und Gemeinschaft auf visuell ansprechende Weise wider.",
+      project2Title: "Urh Mrak - Cellist",
+      project2Description:
+        "Eine künstlerische Darstellung meiner Reise als Cellist. Diese klare und elegante Website präsentiert ausgewählte Medien, teilt meine Biografie und bietet einen einladenden Raum für Menschen, mit mir in Kontakt zu treten.",
+    },
+    contact: {
+      title: "Kontakt aufnehmen",
+      subtitle:
+        "Haben Sie ein Projekt im Kopf? Lassen Sie uns besprechen, wie wir zusammenarbeiten können, um Ihre Ideen zum Leben zu erwecken.",
+      emailLabel: "E-Mail-Adresse",
+      emailPlaceholder: "ihre.email@beispiel.de",
+      messageLabel: "Nachricht",
+      messagePlaceholder: "Erzählen Sie mir von Ihrem Projekt...",
+      submitButton: "Nachricht senden",
+    },
+    footer: {
+      copyright: "© 2025 Urh Mrak. Alle Rechte vorbehalten.",
+      privacyPolicy: "Datenschutzerklärung",
+    },
+    privacy: {
+      title: "Datenschutzerklärung",
+      close: "Schließen",
+    },
+  },
+};
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
   const [visibleElements, setVisibleElements] = useState<Set<string>>(
@@ -11,7 +119,10 @@ export default function Home() {
   );
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [language, setLanguage] = useState<"en" | "de">("en");
   const elementRefs = useRef<{ [key: string]: HTMLElement | null }>({});
+
+  const t = translations[language];
 
   // Smooth scroll to section
   const scrollToSection = (sectionId: string) => {
@@ -124,7 +235,13 @@ export default function Home() {
         }}
       />
 
-      <Navigation activeSection={activeSection} onNavClick={scrollToSection} />
+      <Navigation
+        activeSection={activeSection}
+        onNavClick={scrollToSection}
+        language={language}
+        onLanguageChange={setLanguage}
+        translations={t.nav}
+      />
 
       <main className="lg:pl-32">
         {/* Home Section */}
@@ -166,7 +283,7 @@ export default function Home() {
                     : "opacity-0 translate-y-8"
                 }`}
               >
-                Hi, I am Urh Mrak!
+                {t.home.greeting}
               </h2>
               <p
                 ref={(el) => {
@@ -179,12 +296,7 @@ export default function Home() {
                     : "opacity-0 translate-y-8"
                 }`}
               >
-                I craft pixel-perfect websites that bring creatives' visions to
-                life — beautiful, bold, and bursting with personality. Every
-                site I design is a seamless blend of speedy performance and
-                elegant user experience, making your online presence as stunning
-                as your ideas. Dive in to see my work or drop me a line, and
-                let's make something amazing together.
+                {t.home.description}
               </p>
 
               {/* Call to action */}
@@ -203,7 +315,7 @@ export default function Home() {
                   onClick={() => scrollToSection("work")}
                   className="inline-flex items-center px-8 py-4 bg-charcoal text-cream font-medium rounded-lg hover:bg-navy transition-colors duration-300"
                 >
-                  View My Work
+                  {t.home.cta}
                   <svg
                     className="ml-2 w-5 h-5"
                     fill="none"
@@ -243,7 +355,7 @@ export default function Home() {
                       : "opacity-0 translate-y-8"
                   }`}
                 >
-                  About Me
+                  {t.about.title}
                 </h2>
 
                 <div
@@ -257,27 +369,9 @@ export default function Home() {
                       : "opacity-0 translate-y-8"
                   }`}
                 >
-                  <p>
-                    I’m Urh, and I’m here to help you create an online presence
-                    that’s both beautiful and bold — one that captures your
-                    unique personality and forges a genuine connection with your
-                    audiences and communities.
-                  </p>
-                  <p>
-                    You can find me in Iceland or somewhere across Europe,
-                    always on the lookout for the next inspiring project —
-                    whether it’s in music or technology. When I find myself in
-                    my current home base, Iceland, surrounded by breathtaking
-                    natural beauty, I also treasure the lively, fun moments
-                    shared on stage with my colleagues in the Iceland Symphony
-                    Orchestra.
-                  </p>
-                  <p>
-                    Classical music and the serenity of nature fuel my
-                    creativity, while technology and AI keep me excited about
-                    the future. It’s a unique harmony I love exploring, both on
-                    stage and on screen.
-                  </p>
+                  <p>{t.about.paragraph1}</p>
+                  <p>{t.about.paragraph2}</p>
+                  <p>{t.about.paragraph3}</p>
                 </div>
               </div>
 
@@ -294,7 +388,7 @@ export default function Home() {
                 }`}
               >
                 <h3 className="text-2xl font-semibold text-charcoal mb-8">
-                  Technologies I Work With
+                  {t.about.techTitle}
                 </h3>
 
                 <div className="grid grid-cols-2 gap-8">
@@ -373,7 +467,7 @@ export default function Home() {
                     : "opacity-0 translate-y-8"
                 }`}
               >
-                My Work
+                {t.work.title}
               </h2>
               <p
                 ref={(el) => {
@@ -386,7 +480,7 @@ export default function Home() {
                     : "opacity-0 translate-y-8"
                 }`}
               >
-                Have a look at my recent creations:
+                {t.work.subtitle}
               </p>
             </div>
 
@@ -405,18 +499,10 @@ export default function Home() {
               >
                 <div className="space-y-4">
                   <h3 className="text-2xl font-semibold text-charcoal">
-                    Suzuki Early Music Education Classes for the youngest
+                    {t.work.project1Title}
                   </h3>
                   <p className="text-dark-gray leading-relaxed">
-                    The Suzuki Early Childhood Education Reykjavik website
-                    showcases a joyful and nurturing music program for babies
-                    and parents, inspired by the Suzuki Method. It highlights
-                    the unique teaching approach, class details, and the
-                    passionate instructor, creating a warm invitation for
-                    families to discover the benefits of early musical
-                    development. The site reflects the program’s focus on
-                    creativity, growth, and community in a visually inviting
-                    way.
+                    {t.work.project1Description}
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4"></div>
                 </div>
@@ -468,13 +554,10 @@ export default function Home() {
               >
                 <div className="space-y-4">
                   <h3 className="text-2xl font-semibold text-charcoal">
-                    Urh Mrak - Cellist
+                    {t.work.project2Title}
                   </h3>
                   <p className="text-dark-gray leading-relaxed">
-                    An artistic portrayal of my journey as a cellist. This clean
-                    and elegant website highlights select media, shares my
-                    biography, and offers an inviting space for people to get in
-                    touch with me.
+                    {t.work.project2Description}
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4"></div>
                 </div>
@@ -533,7 +616,7 @@ export default function Home() {
                     : "opacity-0 translate-y-8"
                 }`}
               >
-                Get in Touch
+                {t.contact.title}
               </h2>
               <p
                 ref={(el) => {
@@ -546,8 +629,7 @@ export default function Home() {
                     : "opacity-0 translate-y-8"
                 }`}
               >
-                Have a project in mind? Let's discuss how we can work together
-                to bring your ideas to life.
+                {t.contact.subtitle}
               </p>
             </div>
 
@@ -569,15 +651,15 @@ export default function Home() {
                     htmlFor="email"
                     className="block text-sm font-medium text-charcoal mb-2"
                   >
-                    Email Address
+                    {t.contact.emailLabel}
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-transparent text-charcoal placeholder-medium-gray transition-all duration-300"
-                    placeholder="your.email@example.com"
+                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-[#000000] lg:bg-transparent text-charcoal placeholder-medium-gray transition-all duration-300"
+                    placeholder={t.contact.emailPlaceholder}
                   />
                 </div>
 
@@ -587,15 +669,15 @@ export default function Home() {
                     htmlFor="message"
                     className="block text-sm font-medium text-charcoal mb-2"
                   >
-                    Message
+                    {t.contact.messageLabel}
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-transparent text-charcoal placeholder-medium-gray resize-none transition-all duration-300"
-                    placeholder="Tell me about your project..."
+                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-[#000000] lg:bg-transparent text-charcoal placeholder-medium-gray resize-none transition-all duration-300"
+                    placeholder={t.contact.messagePlaceholder}
                   />
                 </div>
 
@@ -605,7 +687,7 @@ export default function Home() {
                     type="submit"
                     className="w-full bg-accent text-black font-medium py-3 px-6 rounded-lg hover:bg-accent/90 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-black"
                   >
-                    Send Message
+                    {t.contact.submitButton}
                   </button>
                 </div>
               </form>
@@ -619,16 +701,14 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 py-2">
           <div className="flex items-center justify-center space-x-4">
             {/* Copyright */}
-            <span className="text-white text-[10px]">
-              © 2025 Urh Mrak. All rights reserved.
-            </span>
+            <span className="text-white text-[10px]">{t.footer.copyright}</span>
             <span className="text-white/50 text-[10px]">•</span>
             {/* Privacy Policy Button */}
             <button
               onClick={() => setShowPrivacyPolicy(true)}
               className="text-white hover:text-white/80 text-[10px] underline transition-colors duration-300"
             >
-              Privacy Policy
+              {t.footer.privacyPolicy}
             </button>
           </div>
         </div>
@@ -645,7 +725,7 @@ export default function Home() {
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-white">
-                  Privacy Policy
+                  {t.privacy.title}
                 </h2>
                 <button
                   onClick={() => setShowPrivacyPolicy(false)}
@@ -688,7 +768,7 @@ export default function Home() {
                   onClick={() => setShowPrivacyPolicy(false)}
                   className="bg-accent text-black px-6 py-2 rounded-lg hover:bg-accent/90 transition-colors duration-300"
                 >
-                  Close
+                  {t.privacy.close}
                 </button>
               </div>
             </div>
