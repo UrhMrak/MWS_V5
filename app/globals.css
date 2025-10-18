@@ -96,8 +96,20 @@ body {
 /* Safari mobile specific fix for viewport height */
 @supports (-webkit-touch-callout: none) {
   .fixed-background {
+    height: 100vh;
     height: -webkit-fill-available;
+    min-height: 100vh;
     min-height: -webkit-fill-available;
+  }
+}
+
+/* Additional Safari mobile fix */
+@media screen and (max-width: 768px) {
+  .fixed-background {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
   }
 }
 
