@@ -156,7 +156,7 @@ const Navigation: React.FC<NavigationProps> = ({
       >
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo/Brand and Language Selector */}
+            {/* Logo/Brand */}
             <div className="flex items-center space-x-3">
               <Image
                 src="/images/logo_black.png"
@@ -166,30 +166,6 @@ const Navigation: React.FC<NavigationProps> = ({
                 className="object-contain brightness-0 invert"
                 priority
               />
-              {/* Mobile Language Selector */}
-              <div className="flex items-center space-x-1 text-[10px] font-medium">
-                <button
-                  onClick={() => onLanguageChange("en")}
-                  className={`transition-colors duration-300 ${
-                    language === "en"
-                      ? "text-accent"
-                      : "text-charcoal hover:text-accent"
-                  }`}
-                >
-                  EN
-                </button>
-                <span className="text-medium-gray">I</span>
-                <button
-                  onClick={() => onLanguageChange("de")}
-                  className={`transition-colors duration-300 ${
-                    language === "de"
-                      ? "text-accent"
-                      : "text-charcoal hover:text-accent"
-                  }`}
-                >
-                  DE
-                </button>
-              </div>
             </div>
 
             {/* Navigation Items */}
@@ -216,6 +192,36 @@ const Navigation: React.FC<NavigationProps> = ({
           </div>
         </div>
       </nav>
+
+      {/* Mobile Language Selector - Bottom Right Corner */}
+      <div
+        className="lg:hidden fixed bottom-4 right-4 z-50 px-3 py-2 rounded-lg backdrop-blur-sm"
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
+      >
+        <div className="flex items-center space-x-1 text-xs font-medium">
+          <button
+            onClick={() => onLanguageChange("en")}
+            className={`transition-colors duration-300 ${
+              language === "en"
+                ? "text-accent"
+                : "text-charcoal hover:text-accent"
+            }`}
+          >
+            EN
+          </button>
+          <span className="text-medium-gray">I</span>
+          <button
+            onClick={() => onLanguageChange("de")}
+            className={`transition-colors duration-300 ${
+              language === "de"
+                ? "text-accent"
+                : "text-charcoal hover:text-accent"
+            }`}
+          >
+            DE
+          </button>
+        </div>
+      </div>
 
       {/* Mobile Spacer */}
       <div className="lg:hidden h-16" />
