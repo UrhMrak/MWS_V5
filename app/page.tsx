@@ -56,6 +56,31 @@ const translations = {
     privacy: {
       title: "Privacy Policy",
       close: "Close",
+      content: {
+        intro:
+          "Your privacy is important to us. This Privacy Policy outlines how we collect, use, and protect your personal information in accordance with the General Data Protection Regulation (GDPR).",
+        informationWeCollect: {
+          title: "Information We Collect",
+          text: "We only collect personal data that you voluntarily provide through our website's contact form. This typically includes your name, email address, your phone number and the content of your message. We do not collect or process any other personal information through our website.",
+        },
+        howWeUse: {
+          title: "How We Use Your Information",
+          text: "We use the information you provide solely for the purpose of responding to your inquiry. Once your email has been answered or your request addressed, your personal data (i.e., your email and message) is securely deleted and is not stored on our systems. We do not use your data for marketing purposes, nor do we share it with third parties.",
+        },
+        dataSecurity: {
+          title: "Data Security",
+          text: "We take appropriate technical and organizational measures to ensure that your personal data is handled securely and in accordance with GDPR. Your information is transmitted securely and deleted promptly after use. We do not retain your personal data longer than necessary.",
+        },
+        credits: {
+          title: "Credits and Copyrights",
+          text1:
+            "All content on this website, including text, design, and layout, is created and owned by Urh Mrak. Unauthorized use or reproduction of any materials is strictly prohibited without explicit permission. The website is hosted on Bluehost hosting platform.",
+        },
+        contact: {
+          title: "Contact Us",
+          text: "If you have any questions about this Privacy Policy, please contact us at urh.mrak@gmail.com",
+        },
+      },
     },
   },
   de: {
@@ -68,22 +93,22 @@ const translations = {
     home: {
       greeting: "Hallo, ich bin Urh Mrak!",
       description:
-        "Ich erstelle pixelgenaue Websites, die die Visionen von Kreativen zum Leben erwecken — schön, mutig und voller Persönlichkeit. Jede Website, die ich gestalte, ist eine nahtlose Verbindung von schneller Performance und elegantem Benutzererlebnis, die Ihre Online-Präsenz genauso beeindruckend macht wie Ihre Ideen. Tauchen Sie ein, um meine Arbeit zu sehen, oder schreiben Sie mir eine Nachricht — lassen Sie uns gemeinsam etwas Großartiges erschaffen.",
+        "Ich erstelle pixelgenaue Websites, die die Visionen von Kreativen zum Leben erwecken — schön, mutig und voller Persönlichkeit. Jede Website, die ich gestalte, ist eine nahtlose Verbindung von schneller Performance und elegantem Benutzererlebnis, die Deine Online-Präsenz genauso beeindruckend macht wie Deine Ideen. Tauche ein, um meine Arbeit zu sehen, oder schreib mir eine Nachricht — lass uns gemeinsam etwas Großartiges erschaffen.",
       cta: "Meine Arbeiten ansehen",
     },
     about: {
       title: "Über mich",
       paragraph1:
-        "Ich bin Urh und helfe Ihnen dabei, eine Online-Präsenz zu schaffen, die sowohl schön als auch mutig ist — eine, die Ihre einzigartige Persönlichkeit einfängt und eine echte Verbindung zu Ihrem Publikum und Ihren Communities schafft.",
+        "Ich bin Urh und helfe Dir dabei, eine Online-Präsenz zu schaffen, die sowohl schön als auch mutig ist — eine, die Deine einzigartige Persönlichkeit einfängt und eine echte Verbindung zu Deinem Publikum und Deinen Communities schafft.",
       paragraph2:
-        "Sie finden mich in Island oder irgendwo in Europa, immer auf der Suche nach dem nächsten inspirierenden Projekt — sei es in der Musik oder in der Technologie. Wenn ich mich in meiner derzeitigen Heimatbasis Island befinde, umgeben von atemberaubender Naturschönheit, schätze ich auch die lebhaften, unterhaltsamen Momente auf der Bühne mit meinen Kollegen im Isländischen Sinfonieorchester.",
+        "Du findest mich in Island oder irgendwo in Europa, immer auf der Suche nach dem nächsten inspirierenden Projekt — sei es in der Musik oder in der Technologie. Wenn ich mich in meiner derzeitigen Heimatbasis Island befinde, umgeben von atemberaubender Naturschönheit, schätze ich auch die lebhaften, unterhaltsamen Momente auf der Bühne mit meinen Kollegen im Isländischen Sinfonieorchester.",
       paragraph3:
         "Klassische Musik und die Ruhe der Natur beflügeln meine Kreativität, während Technologie und KI mich für die Zukunft begeistern. Es ist eine einzigartige Harmonie, die ich gerne erforsche, sowohl auf der Bühne als auch am Bildschirm.",
       techTitle: "Technologien, mit denen ich arbeite",
     },
     work: {
       title: "Meine Arbeiten",
-      subtitle: "Werfen Sie einen Blick auf meine neuesten Kreationen:",
+      subtitle: "Wirf einen Blick auf meine neuesten Kreationen:",
       project1Title: "Suzuki Frühe Musikerziehung für die Kleinsten",
       project1Description:
         "Die Website der Suzuki Early Childhood Education Reykjavik präsentiert ein freudiges und förderndes Musikprogramm für Babys und Eltern, inspiriert von der Suzuki-Methode. Sie hebt den einzigartigen Unterrichtsansatz, Kursdetails und die leidenschaftliche Lehrerin hervor und schafft eine herzliche Einladung für Familien, die Vorteile der frühen musikalischen Entwicklung zu entdecken. Die Website spiegelt den Fokus des Programms auf Kreativität, Wachstum und Gemeinschaft auf visuell ansprechende Weise wider.",
@@ -94,11 +119,11 @@ const translations = {
     contact: {
       title: "Kontakt aufnehmen",
       subtitle:
-        "Haben Sie ein Projekt im Kopf? Lassen Sie uns besprechen, wie wir zusammenarbeiten können, um Ihre Ideen zum Leben zu erwecken.",
+        "Hast Du ein Projekt im Kopf? Lass uns besprechen, wie wir zusammenarbeiten können, um Deine Ideen zum Leben zu erwecken.",
       emailLabel: "E-Mail-Adresse",
-      emailPlaceholder: "ihre.email@beispiel.de",
+      emailPlaceholder: "Deine.email@beispiel.de",
       messageLabel: "Nachricht",
-      messagePlaceholder: "Erzählen Sie mir von Ihrem Projekt...",
+      messagePlaceholder: "Erzähl mir von Deinem Projekt...",
       submitButton: "Nachricht senden",
     },
     footer: {
@@ -108,6 +133,31 @@ const translations = {
     privacy: {
       title: "Datenschutzerklärung",
       close: "Schließen",
+      content: {
+        intro:
+          "Dein Datenschutz ist uns wichtig. Diese Datenschutzerklärung erläutert, wie wir Deine persönlichen Daten in Übereinstimmung mit der Datenschutz-Grundverordnung (DSGVO) sammeln, verwenden und schützen.",
+        informationWeCollect: {
+          title: "Informationen, die wir sammeln",
+          text: "Wir sammeln nur personenbezogene Daten, die Du freiwillig über unser Kontaktformular auf der Website bereitstellst. Dazu gehören typischerweise Dein Name, Deine E-Mail-Adresse, Deine Telefonnummer und der Inhalt Deiner Nachricht. Wir sammeln oder verarbeiten keine anderen personenbezogenen Daten über unsere Website.",
+        },
+        howWeUse: {
+          title: "Wie wir Deine Informationen verwenden",
+          text: "Wir verwenden die von Dir bereitgestellten Informationen ausschließlich zum Zweck der Beantwortung Deiner Anfrage. Sobald Deine E-Mail beantwortet oder Deine Anfrage bearbeitet wurde, werden Deine personenbezogenen Daten (d.h. Deine E-Mail und Nachricht) sicher gelöscht und nicht in unseren Systemen gespeichert. Wir verwenden Deine Daten nicht für Marketingzwecke und geben sie nicht an Dritte weiter.",
+        },
+        dataSecurity: {
+          title: "Datensicherheit",
+          text: "Wir ergreifen angemessene technische und organisatorische Maßnahmen, um sicherzustellen, dass Deine personenbezogenen Daten sicher und in Übereinstimmung mit der DSGVO behandelt werden. Deine Informationen werden sicher übertragen und nach der Verwendung umgehend gelöscht. Wir speichern Deine personenbezogenen Daten nicht länger als notwendig.",
+        },
+        credits: {
+          title: "Credits und Urheberrechte",
+          text1:
+            "Alle Inhalte auf dieser Website, einschließlich Text, Design und Layout, werden von Urh Mrak erstellt und sind sein Eigentum. Die unbefugte Verwendung oder Vervielfältigung von Materialien ist ohne ausdrückliche Genehmigung strengstens untersagt. Die Website wird auf der Bluehost-Hosting-Plattform gehostet.",
+        },
+        contact: {
+          title: "Kontakt",
+          text: "Wenn Du Fragen zu dieser Datenschutzerklärung hast, kontaktiere uns bitte unter urh.mrak@gmail.com",
+        },
+      },
     },
   },
 };
@@ -395,9 +445,13 @@ export default function Home() {
                   {/* HTML Icon */}
                   <div className="flex flex-col items-center space-y-3 p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 ease-out">
                     <div className="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-xl">
-                        &lt;/&gt;
-                      </span>
+                      <svg
+                        className="w-8 h-8 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />
+                      </svg>
                     </div>
                     <span className="text-charcoal font-medium">HTML</span>
                   </div>
@@ -405,7 +459,13 @@ export default function Home() {
                   {/* CSS Icon */}
                   <div className="flex flex-col items-center space-y-3 p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 ease-out">
                     <div className="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-xl">#</span>
+                      <svg
+                        className="w-8 h-8 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />
+                      </svg>
                     </div>
                     <span className="text-charcoal font-medium">CSS</span>
                   </div>
@@ -413,7 +473,13 @@ export default function Home() {
                   {/* JavaScript Icon */}
                   <div className="flex flex-col items-center space-y-3 p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 ease-out">
                     <div className="w-16 h-16 bg-yellow-500 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">JS</span>
+                      <svg
+                        className="w-8 h-8 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" />
+                      </svg>
                     </div>
                     <span className="text-charcoal font-medium">
                       JavaScript
@@ -423,7 +489,13 @@ export default function Home() {
                   {/* React Icon */}
                   <div className="flex flex-col items-center space-y-3 p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 ease-out">
                     <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-xl">⚛</span>
+                      <svg
+                        className="w-8 h-8 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44a23.476 23.476 0 0 0-2.08-.324 23.876 23.876 0 0 0-1.552-2.774c1.1-1.333 2.313-2.18 3.594-2.18zm-9.77.02c1.288 0 2.5.846 3.6 2.18a23.876 23.876 0 0 0-1.55 2.773 23.476 23.476 0 0 0-2.082.325c-.108-.495-.195-.98-.25-1.44-.224-1.869.064-3.322.73-3.704.152-.083.333-.127.552-.128zm4.882 3.05c.455.468.91.992 1.36 1.564-.44.26-.91.56-1.4.889a23.876 23.876 0 0 0-1.356-1.564c.452-.39.91-.73 1.396-1.01zm-5.1 2.82c.28.03.56.06.84.09.4.67.85 1.35 1.36 2.03-.5.62-1.04 1.22-1.62 1.77a23.876 23.876 0 0 1-1.36-2.02c.5-.65.97-1.28 1.4-1.87zm5.1 6.93c-.45-.47-.91-.99-1.36-1.56.44-.26.91-.56 1.4-.89.44.39.9.73 1.39 1.01-.5.62-1.04 1.22-1.62 1.77.5.65.97 1.28 1.4 1.87.5-.65.97-1.28 1.4-1.87.5.62 1.04 1.22 1.62 1.77-.5.65-.97 1.28-1.4 1.87-.5-.65-.97-1.28-1.4-1.87zm4.2-2.93c.5.65.97 1.28 1.4 1.87-.5.62-1.04 1.22-1.62 1.77a23.876 23.876 0 0 1-1.36-2.02c.5-.65.97-1.28 1.4-1.87zm-4.2-2.93c-.5-.65-.97-1.28-1.4-1.87.5-.62 1.04-1.22 1.62-1.77.5.65.97 1.28 1.4 1.87zm5.1-2.82c-.5-.65-.97-1.28-1.4-1.87.5-.62 1.04-1.22 1.62-1.77.5.65.97 1.28 1.4 1.87z" />
+                      </svg>
                     </div>
                     <span className="text-charcoal font-medium">React</span>
                   </div>
@@ -431,7 +503,13 @@ export default function Home() {
                   {/* Tailwind Icon */}
                   <div className="flex flex-col items-center space-y-3 p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 ease-out">
                     <div className="w-16 h-16 bg-teal-500 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">T</span>
+                      <svg
+                        className="w-8 h-8 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
+                      </svg>
                     </div>
                     <span className="text-charcoal font-medium">Tailwind</span>
                   </div>
@@ -439,7 +517,13 @@ export default function Home() {
                   {/* Node.js Icon */}
                   <div className="flex flex-col items-center space-y-3 p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 ease-out">
                     <div className="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">N</span>
+                      <svg
+                        className="w-8 h-8 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.080-0.383 c0.585-0.203,0.703-0.250,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.185-0.047-0.268,0 L3.073,6.68C2.990,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.729-2.604,2.729c-0.508,0-0.909,0-1.425-0.247l-2.42-1.399C1.807,18.193,1.5,17.716,1.5,17.179V6.921 c0-0.535,0.307-1.018,0.792-1.249l8.795-5.082c0.485-0.23,1.258-0.23,1.743,0l8.794,5.082c0.485,0.23,0.788,0.714,0.788,1.249 v10.246c0,0.535-0.303,1.018-0.788,1.249l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.354-2.655,1.354 c-2.371,0-2.912-0.534-3.139-1.792c-0.024-0.13-0.126-0.216-0.258-0.216h-1.142c-0.141,0-0.254,0.112-0.254,0.253 c0,0.065,0.017,0.124,0.049,0.177c0.568,1.001,1.818,2.456,4.818,2.456C17.501,16.007,19.099,15.91,19.099,13.993z" />
+                      </svg>
                     </div>
                     <span className="text-charcoal font-medium">Node.js</span>
                   </div>
@@ -511,7 +595,7 @@ export default function Home() {
                     href="https://suzukiece-reykjavik.is/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="aspect-video w-full max-w-md overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg"
+                    className="aspect-video w-full max-w-sm sm:max-w-md overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg"
                   >
                     <Image
                       src="/images/suzukiece.png"
@@ -527,7 +611,7 @@ export default function Home() {
                     href="https://suzukiece-reykjavik.is/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute -bottom-4 -right-4 w-24 h-48 lg:w-28 lg:h-56 overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+                    className="absolute -bottom-4 right-2 sm:right-4 lg:-right-4 w-20 h-40 sm:w-24 sm:h-48 lg:w-28 lg:h-56 overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
                   >
                     <Image
                       src="/images/suzukiecePhone.png"
@@ -566,7 +650,7 @@ export default function Home() {
                     href="https://urh-mrak.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="aspect-video w-full max-w-md overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg"
+                    className="aspect-video w-full max-w-sm sm:max-w-md overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg"
                   >
                     <Image
                       src="/images/urhmrak.png"
@@ -582,7 +666,7 @@ export default function Home() {
                     href="https://urh-mrak.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute -bottom-4 -right-4 w-24 h-48 lg:w-28 lg:h-56 overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+                    className="absolute -bottom-4 right-2 sm:right-4 lg:-right-4 w-20 h-40 sm:w-24 sm:h-48 lg:w-28 lg:h-56 overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
                   >
                     <Image
                       src="/images/urhmrakPhone.png"
@@ -737,29 +821,32 @@ export default function Home() {
 
               {/* Content */}
               <div className="space-y-4 text-white leading-relaxed">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <p>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia
-                  deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo.
-                </p>
-                <p>
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                  odit aut fugit, sed quia consequuntur magni dolores eos qui
-                  ratione voluptatem sequi nesciunt.
-                </p>
+                <p>{t.privacy.content.intro}</p>
+
+                <h3 className="text-lg font-semibold text-white mt-6 mb-2">
+                  {t.privacy.content.informationWeCollect.title}
+                </h3>
+                <p>{t.privacy.content.informationWeCollect.text}</p>
+
+                <h3 className="text-lg font-semibold text-white mt-6 mb-2">
+                  {t.privacy.content.howWeUse.title}
+                </h3>
+                <p>{t.privacy.content.howWeUse.text}</p>
+
+                <h3 className="text-lg font-semibold text-white mt-6 mb-2">
+                  {t.privacy.content.dataSecurity.title}
+                </h3>
+                <p>{t.privacy.content.dataSecurity.text}</p>
+
+                <h3 className="text-lg font-semibold text-white mt-6 mb-2">
+                  {t.privacy.content.credits.title}
+                </h3>
+                <p>{t.privacy.content.credits.text1}</p>
+
+                <h3 className="text-lg font-semibold text-white mt-6 mb-2">
+                  {t.privacy.content.contact.title}
+                </h3>
+                <p>{t.privacy.content.contact.text}</p>
               </div>
 
               {/* Close Button */}
