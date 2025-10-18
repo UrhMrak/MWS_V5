@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "../components/CustomImage";
 import Navigation from "../components/Navigation";
+import emailjs from "@emailjs/browser";
 
 // Translation object
 const translations = {
@@ -170,9 +171,62 @@ export default function Home() {
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [language, setLanguage] = useState<"en" | "de">("en");
+  const [formStatus, setFormStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
+  const [formMessage, setFormMessage] = useState("");
   const elementRefs = useRef<{ [key: string]: HTMLElement | null }>({});
+  const formRef = useRef<HTMLFormElement>(null);
 
   const t = translations[language];
+
+  // EmailJS configuration
+  const EMAILJS_SERVICE_ID = "service_nyjf5g3";
+  const EMAILJS_TEMPLATE_ID = "template_ramlvtb";
+  const EMAILJS_PUBLIC_KEY = "ZLsp98_fJEVSyFYI1";
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  }, []);
+
+  // Form submission handler
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormStatus("sending");
+    setFormMessage("");
+
+    const formData = new FormData(e.currentTarget);
+    const templateParams = {
+      from_email: formData.get("email") || "",
+      message: formData.get("message") || "",
+    };
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams
+      );
+      setFormStatus("success");
+      setFormMessage(
+        language === "en"
+          ? "Message sent successfully!"
+          : "Nachricht erfolgreich gesendet!"
+      );
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setFormStatus("error");
+      setFormMessage(
+        language === "en"
+          ? "Failed to send message. Please try again."
+          : "Nachricht konnte nicht gesendet werden. Bitte versuche es erneut."
+      );
+    }
+  };
 
   // Smooth scroll to section
   const scrollToSection = (sectionId: string) => {
@@ -720,8 +774,10 @@ export default function Home() {
             <div className="max-w-2xl mx-auto">
               <form
                 ref={(el) => {
+                  formRef.current = el;
                   elementRefs.current["contact-form"] = el;
                 }}
+                onSubmit={handleSubmit}
                 data-animate-id="contact-form"
                 className={`space-y-6 transition-all duration-700 ease-out delay-200 ${
                   visibleElements.has("contact-form")
@@ -765,13 +821,31 @@ export default function Home() {
                   />
                 </div>
 
+                {/* Status Message */}
+                {formMessage && (
+                  <div
+                    className={`p-3 rounded-lg text-sm ${
+                      formStatus === "success"
+                        ? "bg-green-100 text-green-800 border border-green-200"
+                        : "bg-red-100 text-red-800 border border-red-200"
+                    }`}
+                  >
+                    {formMessage}
+                  </div>
+                )}
+
                 {/* Submit Button */}
                 <div className="pt-4">
                   <button
                     type="submit"
-                    className="w-full bg-accent text-black font-medium py-3 px-6 rounded-lg hover:bg-accent/90 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-black"
+                    disabled={formStatus === "sending"}
+                    className="w-full bg-accent text-black font-medium py-3 px-6 rounded-lg hover:bg-accent/90 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {t.contact.submitButton}
+                    {formStatus === "sending"
+                      ? language === "en"
+                        ? "Sending..."
+                        : "Wird gesendet..."
+                      : t.contact.submitButton}
                   </button>
                 </div>
               </form>
