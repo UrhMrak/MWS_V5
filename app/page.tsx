@@ -293,7 +293,7 @@ export default function Home() {
         translations={t.nav}
       />
 
-      <main className="lg:pl-32">
+      <main className="lg:pl-32 lg:pr-32">
         {/* Home Section */}
         <section
           id="home"
