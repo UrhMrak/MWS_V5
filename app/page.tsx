@@ -187,12 +187,31 @@ export default function Home() {
 
   // Initialize EmailJS
   useEffect(() => {
-    emailjs.init(EMAILJS_PUBLIC_KEY);
+    try {
+      console.log("EmailJS available:", !!emailjs);
+      console.log("EmailJS send method available:", !!emailjs.send);
+      console.log("Environment:", process.env.NODE_ENV);
+      console.log(
+        "Base path:",
+        process.env.NODE_ENV === "production" ? "/MWS_V5" : ""
+      );
+
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+      console.log("EmailJS initialized successfully");
+    } catch (error) {
+      console.error("EmailJS initialization error:", error);
+    }
   }, []);
 
   // Form submission handler
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    e.stopPropagation();
+
+    console.log("Form submitted"); // Debug log
+    console.log("EmailJS available at submit:", !!emailjs);
+    console.log("EmailJS send method available at submit:", !!emailjs?.send);
+
     setFormStatus("sending");
     setFormMessage("");
 
@@ -202,12 +221,27 @@ export default function Home() {
       message: formData.get("message") || "",
     };
 
+    console.log("Sending email with params:", templateParams); // Debug log
+
+    // Check if EmailJS is available
+    if (!emailjs || !emailjs.send) {
+      console.error("EmailJS not available!");
+      setFormStatus("error");
+      setFormMessage(
+        language === "en"
+          ? "Email service not available. Please try again later."
+          : "E-Mail-Service nicht verfügbar. Bitte versuche es später erneut."
+      );
+      return;
+    }
+
     try {
-      await emailjs.send(
+      const result = await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         templateParams
       );
+      console.log("Email sent successfully:", result); // Debug log
       setFormStatus("success");
       setFormMessage(
         language === "en"
@@ -778,6 +812,7 @@ export default function Home() {
                   elementRefs.current["contact-form"] = el;
                 }}
                 onSubmit={handleSubmit}
+                noValidate
                 data-animate-id="contact-form"
                 className={`space-y-6 transition-all duration-700 ease-out delay-200 ${
                   visibleElements.has("contact-form")
