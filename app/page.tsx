@@ -808,7 +808,9 @@ export default function Home() {
             <div className="max-w-2xl mx-auto">
               <form
                 ref={(el) => {
-                  formRef.current = el;
+                  if (formRef.current !== el) {
+                    (formRef as any).current = el;
+                  }
                   elementRefs.current["contact-form"] = el;
                 }}
                 onSubmit={handleSubmit}
