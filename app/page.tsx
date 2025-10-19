@@ -185,6 +185,11 @@ export default function Home() {
   const EMAILJS_TEMPLATE_ID = "template_ramlvtb";
   const EMAILJS_PUBLIC_KEY = "ZLsp98_fJEVSyFYI1";
 
+  // Update HTML lang attribute when language changes
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
+
   // Initialize EmailJS
   useEffect(() => {
     try {
