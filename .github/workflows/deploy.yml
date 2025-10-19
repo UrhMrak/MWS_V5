@@ -3,8 +3,6 @@ name: Deploy to Bluehost
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   build-and-deploy:
@@ -12,10 +10,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "18"
           cache: "npm"
@@ -24,7 +22,14 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build
+        run: NODE_ENV=production npm run build
+
+      - name: Verify build output
+        run: |
+          echo "Checking if out directory exists..."
+          ls -la out/
+          echo "Checking if index.html exists..."
+          ls -la out/index.html
 
       - name: Deploy to Bluehost via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
