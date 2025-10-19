@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MRAK Web Studios - Portfolio",
+  title: "Mrak Web Studios",
   description:
     "Modern web development portfolio showcasing skills and previous work",
 };
