@@ -49,6 +49,21 @@ jobs:
           EOF
           echo ".htaccess file created!"
 
+      - name: Copy test file
+        run: |
+          echo "Copying test deployment file..."
+          cp test-deployment.html out/test.html
+          echo "Test file copied!"
+
+      - name: Set proper permissions
+        run: |
+          echo "Setting proper file permissions..."
+          find out/ -type f -exec chmod 644 {} \;
+          find out/ -type d -exec chmod 755 {} \;
+          chmod 644 out/index.html
+          chmod 644 out/.htaccess
+          echo "Permissions set!"
+
       - name: Deploy to Bluehost via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
