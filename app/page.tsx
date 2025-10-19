@@ -62,7 +62,7 @@ const translations = {
           "Your privacy is important to us. This Privacy Policy outlines how we collect, use, and protect your personal information in accordance with the General Data Protection Regulation (GDPR).",
         informationWeCollect: {
           title: "Information We Collect",
-          text: "We only collect personal data that you voluntarily provide through our website's contact form. This typically includes your name, email address, your phone number and the content of your message. We do not collect or process any other personal information through our website.",
+          text: "We only collect personal data that you voluntarily provide through our website's contact form. This typically includes your email address and the content of your message. We do not collect or process any other personal information through our website.",
         },
         howWeUse: {
           title: "How We Use Your Information",
@@ -139,7 +139,7 @@ const translations = {
           "Dein Datenschutz ist uns wichtig. Diese Datenschutzerklärung erläutert, wie wir Deine persönlichen Daten in Übereinstimmung mit der Datenschutz-Grundverordnung (DSGVO) sammeln, verwenden und schützen.",
         informationWeCollect: {
           title: "Informationen, die wir sammeln",
-          text: "Wir sammeln nur personenbezogene Daten, die Du freiwillig über unser Kontaktformular auf der Website bereitstellst. Dazu gehören typischerweise Dein Name, Deine E-Mail-Adresse, Deine Telefonnummer und der Inhalt Deiner Nachricht. Wir sammeln oder verarbeiten keine anderen personenbezogenen Daten über unsere Website.",
+          text: "Wir sammeln nur personenbezogene Daten, die Du freiwillig über unser Kontaktformular auf der Website bereitstellst. Dazu gehören typischerweise Deine E-Mail-Adresse und der Inhalt Deiner Nachricht. Wir sammeln oder verarbeiten keine anderen personenbezogenen Daten über unsere Website.",
         },
         howWeUse: {
           title: "Wie wir Deine Informationen verwenden",
@@ -406,7 +406,7 @@ export default function Home() {
                   alt="MRAK Logo"
                   width={300}
                   height={300}
-                  className="object-contain brightness-0 invert lg:w-[350px] lg:h-[350px]"
+                  className="object-contain brightness-0 invert lg:w-[350px] lg:h-[350px] drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
                   priority
                 />
               </div>
