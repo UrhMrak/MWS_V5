@@ -42,10 +42,7 @@ jobs:
         run: |
           echo "Creating .htaccess file for Bluehost..."
           cat > out/.htaccess << 'EOF'
-          RewriteEngine On
-          RewriteCond %{REQUEST_FILENAME} !-f
-          RewriteCond %{REQUEST_FILENAME} !-d
-          RewriteRule ^(.*)$ /index.html [QSA,L]
+          DirectoryIndex index.html
           EOF
           echo ".htaccess file created!"
 
@@ -53,6 +50,8 @@ jobs:
         run: |
           echo "Copying test deployment file..."
           cp test-deployment.html out/test.html
+          echo "Creating simple index backup..."
+          cp out/index.html out/index-backup.html
           echo "Test file copied!"
 
       - name: Set proper permissions
