@@ -385,7 +385,7 @@ export default function Home() {
         {/* Home Section */}
         <section
           id="home"
-          className="min-h-screen flex items-start lg:items-center justify-center px-4 lg:px-16 relative pt-2 lg:pt-0"
+          className="min-h-screen flex items-start lg:items-center justify-center px-4 lg:px-16 relative pt-0 lg:pt-0"
         >
           {/* Animated Dots Background */}
           <div className="grid-background">
@@ -438,7 +438,7 @@ export default function Home() {
           </div>
 
           <div className="max-w-6xl mx-auto text-center relative z-10">
-            <div className="space-y-6">
+            <div className="space-y-6 sm:space-y-6 space-y-4">
               {/* Logo */}
               <div
                 ref={(el) => {
@@ -465,7 +465,7 @@ export default function Home() {
                   elementRefs.current["title"] = el;
                 }}
                 data-animate-id="title"
-                className={`text-2xl lg:text-3xl font-medium text-accent mb-6 transition-all duration-700 ease-out delay-100 ${
+                className={`text-2xl lg:text-3xl font-medium text-accent mb-6 sm:mb-6 mb-3 transition-all duration-700 ease-out delay-100 ${
                   visibleElements.has("title")
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -478,7 +478,7 @@ export default function Home() {
                   elementRefs.current["description"] = el;
                 }}
                 data-animate-id="description"
-                className={`mobile-text-reduced text-base lg:text-xl text-dark-gray max-w-2xl mx-auto leading-relaxed transition-all duration-700 ease-out delay-200 ${
+                className={`mobile-text-reduced text-base lg:text-xl text-dark-gray max-w-2xl mx-auto leading-relaxed mb-4 sm:mb-0 transition-all duration-700 ease-out delay-200 ${
                   visibleElements.has("description")
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
