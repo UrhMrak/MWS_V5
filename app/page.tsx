@@ -385,9 +385,23 @@ export default function Home() {
         {/* Home Section */}
         <section
           id="home"
-          className="min-h-screen flex items-center justify-center px-4 lg:px-16"
+          className="min-h-screen flex items-center justify-center px-4 lg:px-16 relative"
         >
-          <div className="max-w-6xl mx-auto text-center">
+          {/* Animated Dots Background */}
+          <div className="grid-background">
+            <div className="grid-dots">
+              <div className="grid-dot"></div>
+              <div className="grid-dot"></div>
+              <div className="grid-dot"></div>
+              <div className="grid-dot"></div>
+              <div className="grid-dot"></div>
+              <div className="grid-dot"></div>
+              <div className="grid-dot"></div>
+              <div className="grid-dot"></div>
+            </div>
+          </div>
+
+          <div className="max-w-6xl mx-auto text-center relative z-10">
             <div className="space-y-6">
               {/* Logo */}
               <div
@@ -451,7 +465,7 @@ export default function Home() {
               >
                 <button
                   onClick={() => scrollToSection("work")}
-                  className="inline-flex items-center px-8 py-4 bg-charcoal text-cream font-medium rounded-lg hover:bg-navy transition-colors duration-300"
+                  className="glow-border inline-flex items-center px-8 py-4 bg-charcoal text-cream font-medium rounded-lg hover:bg-navy transition-colors duration-300"
                 >
                   {t.home.cta}
                   <svg
