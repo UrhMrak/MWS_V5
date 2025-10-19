@@ -4,10 +4,7 @@ import NextImage, { ImageProps } from "next/image";
 
 // Get the basePath from environment or config
 const getBasePath = () => {
-  // In production (static export), add the GitHub Pages base path
-  if (process.env.NODE_ENV === "production") {
-    return "/MWS_V5";
-  }
+  // No base path needed for Bluehost subdirectory hosting
   return "";
 };
 

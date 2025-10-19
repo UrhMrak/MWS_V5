@@ -191,10 +191,7 @@ export default function Home() {
       console.log("EmailJS available:", !!emailjs);
       console.log("EmailJS send method available:", !!emailjs.send);
       console.log("Environment:", process.env.NODE_ENV);
-      console.log(
-        "Base path:",
-        process.env.NODE_ENV === "production" ? "/MWS_V5" : ""
-      );
+      console.log("Base path: (none - direct hosting)");
 
       emailjs.init(EMAILJS_PUBLIC_KEY);
       console.log("EmailJS initialized successfully");
