@@ -387,7 +387,7 @@ export default function Home() {
         {/* Home Section */}
         <section
           id="home"
-          className="min-h-screen flex items-start lg:items-center justify-center px-4 lg:px-16 relative pt-0 lg:pt-0"
+          className="min-h-screen flex items-start lg:items-center justify-center px-4 lg:px-16 relative pt-0 pb-20 lg:pt-0 lg:pb-0"
         >
           {/* Animated Dots Background */}
           <div className="grid-background">
