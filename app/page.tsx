@@ -454,8 +454,8 @@ export default function Home() {
                 <Image
                   src="/images/logo_black.png"
                   alt="MRAK Logo"
-                  width={300}
-                  height={300}
+                  width={350}
+                  height={350}
                   className="object-contain brightness-0 invert w-[270px] h-[270px] lg:w-[350px] lg:h-[350px] drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
                   priority
                 />
