@@ -385,7 +385,7 @@ export default function Home() {
         {/* Home Section */}
         <section
           id="home"
-          className="min-h-screen flex items-center justify-center px-4 lg:px-16 relative"
+          className="min-h-screen flex items-start lg:items-center justify-center px-4 lg:px-16 relative pt-2 lg:pt-0"
         >
           {/* Animated Dots Background */}
           <div className="grid-background">
@@ -420,7 +420,7 @@ export default function Home() {
                   alt="MRAK Logo"
                   width={300}
                   height={300}
-                  className="object-contain brightness-0 invert lg:w-[350px] lg:h-[350px] drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+                  className="object-contain brightness-0 invert w-[270px] h-[270px] lg:w-[350px] lg:h-[350px] drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
                   priority
                 />
               </div>
@@ -442,7 +442,7 @@ export default function Home() {
                   elementRefs.current["description"] = el;
                 }}
                 data-animate-id="description"
-                className={`text-lg lg:text-xl text-dark-gray max-w-2xl mx-auto leading-relaxed transition-all duration-700 ease-out delay-200 ${
+                className={`text-base lg:text-xl text-dark-gray max-w-2xl mx-auto leading-relaxed transition-all duration-700 ease-out delay-200 ${
                   visibleElements.has("description")
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
