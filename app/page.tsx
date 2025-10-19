@@ -95,7 +95,7 @@ const translations = {
       greeting: "Hallo, ich bin Urh Mrak!",
       description:
         "Ich erstelle pixelgenaue Websites, die die Visionen von Kreativen zum Leben erwecken — schön, mutig und voller Persönlichkeit. Jede Website, die ich gestalte, ist eine nahtlose Verbindung von schneller Performance und elegantem Benutzererlebnis, die Deine Online-Präsenz genauso beeindruckend macht wie Deine Ideen. Tauche ein, um meine Arbeit zu sehen, oder schreib mir eine Nachricht — lass uns gemeinsam etwas Großartiges erschaffen.",
-      cta: "Meine Arbeiten ansehen",
+      cta: "Meine Projekte ansehen",
     },
     about: {
       title: "Über mich",
@@ -108,7 +108,7 @@ const translations = {
       techTitle: "Technologien, mit denen ich arbeite",
     },
     work: {
-      title: "Meine Arbeiten",
+      title: "Meine Projekte",
       subtitle: "Wirf einen Blick auf meine neuesten Kreationen:",
       project1Title: "Suzuki Frühe Musikerziehung für die Kleinsten",
       project1Description:
