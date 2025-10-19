@@ -389,16 +389,52 @@ export default function Home() {
         >
           {/* Animated Dots Background */}
           <div className="grid-background">
-            <div className="grid-dots">
-              <div className="grid-dot"></div>
-              <div className="grid-dot"></div>
-              <div className="grid-dot"></div>
-              <div className="grid-dot"></div>
-              <div className="grid-dot"></div>
-              <div className="grid-dot"></div>
-              <div className="grid-dot"></div>
-              <div className="grid-dot"></div>
-            </div>
+            {/* SVG for connection lines */}
+            <svg
+              className="dot-connections"
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+            >
+              {/* Random direction lines across the screen */}
+              <line
+                className="connection-line animate-1"
+                x1="15%"
+                y1="15%"
+                x2="60%"
+                y2="35%"
+              />
+              <line
+                className="connection-line animate-2"
+                x1="75%"
+                y1="20%"
+                x2="30%"
+                y2="50%"
+              />
+
+              <line
+                className="connection-line animate-4"
+                x1="10%"
+                y1="60%"
+                x2="45%"
+                y2="20%"
+              />
+              <line
+                className="connection-line animate-5"
+                x1="65%"
+                y1="10%"
+                x2="25%"
+                y2="70%"
+              />
+              <line
+                className="connection-line animate-6"
+                x1="70%"
+                y1="60%"
+                x2="30%"
+                y2="10%"
+              />
+            </svg>
           </div>
 
           <div className="max-w-6xl mx-auto text-center relative z-10">
@@ -442,7 +478,7 @@ export default function Home() {
                   elementRefs.current["description"] = el;
                 }}
                 data-animate-id="description"
-                className={`text-base lg:text-xl text-dark-gray max-w-2xl mx-auto leading-relaxed transition-all duration-700 ease-out delay-200 ${
+                className={`mobile-text-reduced text-base lg:text-xl text-dark-gray max-w-2xl mx-auto leading-relaxed transition-all duration-700 ease-out delay-200 ${
                   visibleElements.has("description")
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -465,7 +501,7 @@ export default function Home() {
               >
                 <button
                   onClick={() => scrollToSection("work")}
-                  className="glow-border inline-flex items-center px-8 py-4 bg-charcoal text-cream font-medium rounded-lg hover:bg-navy transition-colors duration-300"
+                  className="mobile-text-reduced glow-border inline-flex items-center px-8 py-4 bg-charcoal text-cream font-medium rounded-lg hover:bg-navy transition-colors duration-300"
                 >
                   {t.home.cta}
                   <svg
