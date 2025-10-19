@@ -174,7 +174,11 @@ const Navigation: React.FC<NavigationProps> = ({
                 <button
                   key={item.id}
                   onClick={() => onNavClick(item.id)}
-                  className="relative text-[10px] font-medium text-charcoal hover:text-accent transition-colors duration-300"
+                  className={`relative text-[10px] font-medium transition-colors duration-300 ${
+                    activeSection === item.id
+                      ? "text-accent"
+                      : "text-charcoal hover:text-accent"
+                  }`}
                 >
                   <span
                     className={`inline-block transition-all duration-300 ease-in-out transform ${
