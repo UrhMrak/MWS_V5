@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: "Mrak Web Studios",
   description:
     "Modern web development portfolio showcasing skills and previous work",
+  icons: {
+    icon: "/images/logo_black.png",
+    apple: "/images/logo_black.png",
+  },
 };
 
 export default function RootLayout({
